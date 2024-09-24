@@ -4,6 +4,7 @@
     import ThemeToggle from '$lib/components/ThemeToggle.svelte';
 	import LinkButton from "../lib/components/LinkButton.svelte";
 	import Navbar from "../lib/components/Navbar.svelte";
+
   </script>
   
   <div data-theme={$theme}>
