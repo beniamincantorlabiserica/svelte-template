@@ -6,7 +6,7 @@ export default {
   },
   plugins: [require("daisyui")],
   daisyui: {
-    themes: ["retro", "dark"], // you can add more themes or customize them
+    themes: ["retro", "synthwave"],
   },
 }
 
