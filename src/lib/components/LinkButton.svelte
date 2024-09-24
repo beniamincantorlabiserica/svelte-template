@@ -3,7 +3,8 @@
 	let linkUrl = 'https://personal-website-svelte-6hf.pages.dev/';
 </script>
 
-<div class="fixed top-4 right-4 z-50">
+<!-- <div class="fixed top-4 right-4 z-50"> -->
+    <div class="flex justify-end">
 <a
 	href={linkUrl}
 	target="_blank"
