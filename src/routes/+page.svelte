@@ -4,8 +4,8 @@
 	import DottedCallOut from "../lib/components/DottedCallOut.svelte";
 	import { onMount } from "svelte";
 	import toast, { Toaster } from 'svelte-french-toast';
-	import Navbar from "../lib/components/Navbar.svelte";
 	import Faq from "../lib/components/FAQ.svelte";
+
 
     onMount(() => {
 		toast.success("It works!");

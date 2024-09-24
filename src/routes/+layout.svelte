@@ -5,9 +5,29 @@
 	import LinkButton from "../lib/components/LinkButton.svelte";
 	import Navbar from "../lib/components/Navbar.svelte";
 
-  </script>
+    import { fontStore } from '$lib/stores/fontStore';
+    import { onMount } from 'svelte';
+
+    let fontLink;
+
+    onMount(() => {
+        const link = document.createElement('link');
+        link.rel = 'stylesheet';
+        fontStore.subscribe(value => {
+            link.href = value.fontUrl;
+            fontLink = link;
+        });
+        document.head.appendChild(link);
+    });
+</script>
+
+<svelte:head>
+    {#if fontLink}
+        <link rel="stylesheet" href={fontLink.href}>
+    {/if}
+</svelte:head>
   
-  <div data-theme={$theme}>
+  <div data-theme={$theme} style="font-family: {$fontStore.fontFamily}">
     <!-- Your layout content -->
     <div class="flex items-center justify-center flex-row mx-4 my-8">
         <div class="flex-1">
